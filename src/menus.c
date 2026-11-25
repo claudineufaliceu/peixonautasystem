@@ -13,6 +13,7 @@ int menu_principal() {
     printf("--------------------------------\n\n");
     printf("usr >>> ");
     scanf("%i", &opcao);
+    getchar();
 
     return opcao;
 }
@@ -31,6 +32,7 @@ int menu_estoque() {
     printf("--------------------------------\n\n");
     printf("usr -> ");
     scanf("%i", &opcao);
+    getchar();
 
     return opcao;
 }
@@ -49,6 +51,7 @@ int menu_clientes() {
     printf("--------------------------------\n\n");
     printf("usr -> ");
     scanf("%i", &opcao);
+    getchar();
 
     return opcao;
 }
@@ -66,6 +69,7 @@ int menu_vendas() {
     printf("--------------------------------\n\n");
     printf("usr -> ");
     scanf("%i", &opcao);
+    getchar();
 
     return opcao;
 }

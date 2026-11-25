@@ -10,7 +10,7 @@ typedef char string[T_STR];
 
 typedef struct peixe {
     uint8_t id;
-    string espécie;
+    string especie;
     float qtd_estoque;
     float vlr_unitario;
 } peixe_t;
