@@ -151,14 +151,14 @@ void exportar_dados_peixes_html(no_peixe_t *lista) {
 
     fp = fopen(PEIXES_HTML, "w");
 
-    fprintf(fp, "<html><body><table><thead><tr><th>ID Peixe</th><th>Espécie</th><th>QTD Estoque</th><th>Valor Unitário</th></tr></thead>\n");
-    fprintf(fp, "<tbody>\n");
+    fprintf(fp, "<html><body><table><thead><tr><th>ID Peixe</th><th>Espécie</th><th>QTD Estoque</th><th>Valor Unitário</th></tr></thead>");
+    fprintf(fp, "<tbody>");
 
     while (lista) {
         fprintf(fp, "<tr><td>%hhu</tr></td>", lista -> peixe.id);
         fprintf(fp, "<tr><td>%s</tr></td>", lista -> peixe.especie);
         fprintf(fp, "<tr><td>%.2f</tr></td>", lista -> peixe.qtd_estoque);
-        fprintf(fp, "<tr><td>%.2f</tr></td>\n", lista -> peixe.vlr_unitario);
+        fprintf(fp, "<tr><td>%.2f</tr></td>", lista -> peixe.vlr_unitario);
     }
 
     fprintf(fp, "</tbody>\n");
