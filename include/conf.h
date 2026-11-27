@@ -8,4 +8,8 @@
 #define ARQ_CLIENTES "./arquivos/clientes.bin"
 #define ARQ_VENDAS "./arquivos/vendas.bin"
 
+#define PEIXES_CSV "./arquivos/lista_peixes.csv"
+#define PEIXES_TXT "./arquivos/lista_peixes.txt"
+#define PEIXES_HTML "./arquivos/lista_peixes.html"
+
 #endif

@@ -28,6 +28,9 @@ int menu_estoque() {
     printf("3. Consultar item por espécie\n");
     printf("4. Listar itens em estoque\n");
     printf("5. Listar itens com estoque abaixo de um valor\n");
+    printf("6. Exportar dados para arquivo texto\n");
+    printf("7. Exportar dados para arquivo csv\n");
+    printf("8. Exportar dados para arquivo html\n");
     printf("0. Retornar ao menu principal\n");
     printf("--------------------------------\n\n");
     printf("usr -> ");

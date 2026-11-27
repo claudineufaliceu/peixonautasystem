@@ -40,6 +40,12 @@ int main() {
                                     break;
                             case 5: 
                                     break;
+                            case 6: exportar_dados_peixes_txt(lista_peixes.primeiro);
+                                    break;
+                            case 7: exportar_dados_peixes_csv(lista_peixes.primeiro);
+                                    break;
+                            case 8: exportar_dados_peixes_html(lista_peixes.primeiro);
+                                    break;        
                         }
 
                     } while (opc_menu_peixes != 0);
