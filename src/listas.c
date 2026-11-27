@@ -22,7 +22,8 @@ peixe_t criar_novo_peixe() {
     peixe_t peixe;
 
     printf("Identificação.......: ");
-    scanf("%i", &peixe.id);
+    scanf("%hhu", &peixe.id);
+    getchar();
 
     printf("Espécie.............: ");
     fgets(peixe.especie, T_STR, stdin);
@@ -40,6 +41,10 @@ peixe_t criar_novo_peixe() {
 
 cliente_t criar_novo_cliente() {
     cliente_t cliente;
+
+    printf("Identificação.......: ");
+    scanf("%hhu", &cliente.id);
+    getchar();
 
     printf("Nome................: ");
     fgets(cliente.nome, T_STR, stdin);

@@ -1,5 +1,8 @@
 #include "../include/listas.h"
 #include "../include/menus.h"
+#include "../include/utils.h"
+#include "../include/arquivos.h"
+#include "../include/relatorios.h"
 
 int main() {
     controle_lista_peixes_t lista_peixes;
@@ -12,6 +15,13 @@ int main() {
 
     int opc_menu_principal, opc_menu_clientes, opc_menu_vendas, opc_menu_peixes;
     
+    limpar_tela();
+
+    ler_dados_peixes(&lista_peixes);
+    ler_dados_clientes(&lista_clientes);
+    ler_dados_vendas(&lista_vendas);
+
+
     do {
         opc_menu_principal = menu_principal();
 
@@ -20,11 +30,16 @@ int main() {
                         opc_menu_peixes = menu_estoque();
 
                         switch (opc_menu_peixes) {
-                            case 1: break;
-                            case 2: break;
-                            case 3: break;
-                            case 4: break;
-                            case 5: break;
+                            case 1: inserir_no_lista_peixe(&lista_peixes, criar_novo_no_peixe(criar_novo_peixe()));
+                                    break;
+                            case 2: 
+                                    break;
+                            case 3: 
+                                    break;
+                            case 4: listar_peixes(lista_peixes.primeiro);
+                                    break;
+                            case 5: 
+                                    break;
                         }
 
                     } while (opc_menu_peixes != 0);
@@ -35,11 +50,16 @@ int main() {
                         opc_menu_clientes = menu_clientes();
 
                         switch (opc_menu_clientes) {
-                            case 1: break;
-                            case 2: break;
-                            case 3: break;
-                            case 4: break;
-                            case 5: break;
+                            case 1: inserir_no_lista_cliente(&lista_clientes, criar_novo_no_cliente(criar_novo_cliente()));
+                                    break;
+                            case 2: 
+                                    break;
+                            case 3: listar_clientes(lista_clientes.primeiro);
+                                    break;
+                            case 4: 
+                                    break;
+                            case 5: 
+                                    break;
                         }
 
                     } while (opc_menu_clientes != 0);
@@ -62,5 +82,10 @@ int main() {
 
         }
     } while (opc_menu_principal != 0);
+
+    salvar_dados_peixes(lista_peixes.primeiro);
+    salvar_dados_clientes(lista_clientes.primeiro);
+    salvar_dados_vendas(lista_vendas.primeiro);
+
     return 0;
 }
