@@ -119,7 +119,7 @@ void ler_dados_vendas(controle_lista_vendas_t *controle) {
 void exportar_dados_peixes_csv(no_peixe_t *lista) {
     FILE *fp = NULL;
 
-    fopen(PEIXES_CSV, "w");
+    fp = fopen(PEIXES_CSV, "w");
 
     fprintf(fp, "ID Peixe; Espécie; QTD Estoque; Valor Unitário\n");
 
@@ -136,7 +136,7 @@ void exportar_dados_peixes_csv(no_peixe_t *lista) {
 void exportar_dados_peixes_txt(no_peixe_t *lista) {
     FILE *fp = NULL;
 
-    fopen(PEIXES_TXT, "w");
+    fp = fopen(PEIXES_TXT, "w");
 
     while (lista) {
         mostrar_dados_peixe(lista -> peixe, fp);
@@ -149,7 +149,7 @@ void exportar_dados_peixes_txt(no_peixe_t *lista) {
 void exportar_dados_peixes_html(no_peixe_t *lista) {
     FILE *fp = NULL;
 
-    fopen(PEIXES_HTML, "w");
+    fp = fopen(PEIXES_HTML, "w");
 
     fprintf(fp, "<html><body><table><thead><tr><th>ID Peixe</th><th>Espécie</th><th>QTD Estoque</th><th>Valor Unitário</th></tr></thead>\n");
     fprintf(fp, "<tbody>\n");
